@@ -10,6 +10,7 @@ import { UserService } from '../user.service';
 })
 export class UsersComponent implements OnInit {
   users: User[];
+  addUser: boolean;
 
   getAllUsers() {
     this.userService.getAllUsers().subscribe(users => this.users = users);

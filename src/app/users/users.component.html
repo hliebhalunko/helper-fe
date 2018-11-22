@@ -1,9 +1,17 @@
-<ul class="users">
-  <li *ngFor="let user of users"
-      [class.selected]="user === selectedUser"
-      (click)="onSelect(user)">
-    <span class="badge">{{user.id}}</span> {{user.nickname}}
-  </li>
-</ul>
 
-<app-user-detail [user]="selectedUser"></app-user-detail>
+<div class="col">
+  <button (click)="onSelect({}); addUser = true">Add User</button>
+  <ul class="users">
+    <li *ngFor="let user of users"
+        [class.selected]="user === selectedUser"
+        (click)="onSelect(user)">
+      <span class="badge">{{user.id}}</span> {{user.nickname}}
+    </li>
+  </ul>
+</div>
+<div class="col">
+  <app-user-detail [user]="selectedUser"></app-user-detail>
+</div>
+<div *ngIf="addUser" class="col">
+  <button>Done</button>
+</div>

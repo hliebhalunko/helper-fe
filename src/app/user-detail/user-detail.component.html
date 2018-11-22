@@ -1,19 +1,48 @@
 <div *ngIf="user">
   <h2>{{user.rank}} {{user.firstName}} "{{user.nickname}}" {{user.lastName}} Details</h2>
-  <div><span>ID: </span>{{user.id}}</div>
+  <div *ngIf="user.id"><span>ID: </span>{{user.id}}</div>
 
   <div>
     <label>First Name:
-      <input [(ngModel)]="user.firstName" placeholder="name">
+      <input [(ngModel)]="user.firstName" placeholder="First Name">
     </label>
   </div>
-
-  <div><span>Nickname: </span>{{user.nickname}}</div>
-  <div><span>Last Name: </span>{{user.lastName}}</div>
-  <div><span>Rank: </span>{{user.rank}}</div>
-  <div><span>Date of birth: </span>{{user.dateOfBirth}}</div>
-  <div><span>Date of enlistment: </span>{{user.dateOfEnlistment}}</div>
-  <div><span>Blood type: </span>{{user.bloodType}}</div>
-  <div><span>Status: </span>{{user.userStatus}}</div>
-  <div><span>Balance: </span>{{user.balance}}</div>
+  <div>
+    <label>Nickname:
+      <input [(ngModel)]="user.nickname" placeholder="Nickname">
+    </label>
+  </div>
+  <div>
+    <label>Last Name:
+      <input [(ngModel)]="user.lastName" placeholder="Last Name">
+    </label>
+  </div>
+  <div>
+    <label>Rank:
+      <select [(ngModel)]="user.rank" ></select>
+    </label>
+  </div>
+  <div>
+    <label>Date Of Birth:
+      <input [(ngModel)]="user.dateOfBirth" placeholder="name">
+    </label>
+  </div>
+  <div>
+    <label>Date Of Enlistment:
+      <input [(ngModel)]="user.dateOfEnlistment" placeholder="name">
+    </label>
+  </div>
+  <div>
+    <label>Blood Type:
+      <select [(ngModel)]="user.bloodType" ></select>
+    </label>
+  </div>
+  <div>
+    <label>User Status:
+      <select [(ngModel)]="user.userStatus" ></select>
+    </label>
+    <label>Balance:
+      <input [(ngModel)]="user.balance" placeholder="name">
+    </label>
+  </div>
 </div>
