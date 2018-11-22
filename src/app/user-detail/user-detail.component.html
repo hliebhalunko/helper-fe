@@ -1,0 +1,19 @@
+<div *ngIf="user">
+  <h2>{{user.rank}} {{user.firstName}} "{{user.nickname}}" {{user.lastName}} Details</h2>
+  <div><span>ID: </span>{{user.id}}</div>
+
+  <div>
+    <label>First Name:
+      <input [(ngModel)]="user.firstName" placeholder="name">
+    </label>
+  </div>
+
+  <div><span>Nickname: </span>{{user.nickname}}</div>
+  <div><span>Last Name: </span>{{user.lastName}}</div>
+  <div><span>Rank: </span>{{user.rank}}</div>
+  <div><span>Date of birth: </span>{{user.dateOfBirth}}</div>
+  <div><span>Date of enlistment: </span>{{user.dateOfEnlistment}}</div>
+  <div><span>Blood type: </span>{{user.bloodType}}</div>
+  <div><span>Status: </span>{{user.userStatus}}</div>
+  <div><span>Balance: </span>{{user.balance}}</div>
+</div>
