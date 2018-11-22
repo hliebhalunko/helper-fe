@@ -13,7 +13,6 @@ export class UsersComponent implements OnInit {
 
   getAllUsers() {
     this.userService.getAllUsers().subscribe(users => this.users = users);
-    //console.log(users);
   }
 
   selectedUser: User;
