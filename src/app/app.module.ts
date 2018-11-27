@@ -8,6 +8,7 @@ import { UserDetailComponent } from './user-detail/user-detail.component';
 import { MessagesComponent } from './messages/messages.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule }    from '@angular/common/http';
+import { ContributionComponent } from './contribution/contribution.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { HttpClientModule }    from '@angular/common/http';
     UsersComponent,
     BalanceComponent,
     UserDetailComponent,
-    MessagesComponent
+    MessagesComponent,
+    ContributionComponent
   ],
   imports: [
     BrowserModule,

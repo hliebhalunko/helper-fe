@@ -1,17 +1,20 @@
-
 <div class="col">
-  <button (click)="onSelect({}); addUser = true">Add User</button>
+  <button class="add-button" (click)="onSelect({}); addUser = true; watchUser = false">Add User</button>
+  <button *ngIf="watchUser" class="remove-button" (click)="removeUser(selectedUser); watchUser = false">Remove</button>
+  <button *ngIf="watchUser" class="cash-button" (click)="contribute(selectedUser)">Contribute</button>
+
   <ul class="users">
     <li *ngFor="let user of users"
         [class.selected]="user === selectedUser"
-        (click)="onSelect(user)">
+        (click)="onSelect(user); addUser = false; watchUser = true">
       <span class="badge">{{user.id}}</span> {{user.nickname}}
     </li>
   </ul>
 </div>
 <div class="col">
-  <app-user-detail [user]="selectedUser"></app-user-detail>
+  <app-user-detail *ngIf="addUser || watchUser" [user]="selectedUser"></app-user-detail>
+  <app-user-detail *ngIf="contributeUser" [user]="selectedUser"></app-user-detail>
 </div>
 <div *ngIf="addUser" class="col">
-  <button>Done</button>
+  <button (click)="onAddUser(selectedUser); addUser = false; watchUser = false">Done</button>
 </div>

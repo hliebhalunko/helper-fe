@@ -10,7 +10,9 @@ import { User } from '../user';
 export class UserDetailComponent implements OnInit {
   @Input() user: User;
 
-  constructor() { }
+
+  constructor() {
+  }
 
   ngOnInit() {
   }

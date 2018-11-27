@@ -1,0 +1,14 @@
+<div *ngIf="user">
+  <h2>{{user.nickname}}</h2>
+  <div *ngIf="user.id"><span>ID: </span>{{user.id}}</div>
+  <div>
+    <label>Responsive User:
+      User search here
+    </label>
+  </div>
+    <div>
+      <label>Balance:
+        {{user.balance}}
+      </label>
+    </div>
+</div>
